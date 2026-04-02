@@ -1,11 +1,16 @@
+<<<<<<< HEAD
 const colors = require('tailwindcss/colors');
 
+=======
+/** @type {import('tailwindcss').Config} */
+>>>>>>> 262680e68fc409ddb582cf3cd223b6bbbd53a960
 export default {
   content: [
     "./index.html",
     "./src/**/*.{vue,js,ts,jsx,tsx}",
   ],
   theme: {
+<<<<<<< HEAD
     extend: {
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
@@ -32,6 +37,9 @@ export default {
         }
       }
     },
+=======
+    extend: {},
+>>>>>>> 262680e68fc409ddb582cf3cd223b6bbbd53a960
   },
   plugins: [],
 }

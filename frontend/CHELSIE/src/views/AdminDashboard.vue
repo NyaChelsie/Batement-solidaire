@@ -4,8 +4,13 @@
     <!-- Sidebar -->
     <aside class="w-64 bg-gradient-to-b from-red-700 to-red-600 border-r border-red-800 hidden md:flex flex-col z-20 text-white shadow-xl shadow-red-900/20">
       <div class="p-6 flex items-center gap-3">
+<<<<<<< HEAD
           <div class="w-12 h-12 rounded-xl bg-white flex items-center justify-center text-red-700 shadow-md p-1 overflow-hidden">
             <img src="@/assets/logo.png" alt="Batement Solidaire" class="w-full h-full object-contain" />
+=======
+          <div class="w-10 h-10 rounded-xl bg-white flex items-center justify-center text-red-700 shadow-md">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"></path></svg>
+>>>>>>> 262680e68fc409ddb582cf3cd223b6bbbd53a960
           </div>
           <span class="text-xl font-bold tracking-tight text-white leading-tight">Batement<br>Admin</span>
       </div>
@@ -31,10 +36,13 @@
              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
             Stocks de sang
         </button>
+<<<<<<< HEAD
         <button @click="currentTab = 'staff'" :class="currentTab === 'staff' ? 'bg-white/20 text-white font-bold shadow-inner' : 'text-red-100 hover:bg-white/10 hover:text-white font-medium'" class="w-full flex items-center gap-3 px-4 py-3 rounded-xl transition text-left">
              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5V4H2v16h5m10 0v2H7v-2m10 0a2 2 0 01-2 2H9a2 2 0 01-2-2m5-10V7v3m0 0h3m-3 0H9"></path></svg>
             Personnel
         </button>
+=======
+>>>>>>> 262680e68fc409ddb582cf3cd223b6bbbd53a960
         <button @click="currentTab = 'settings'" :class="currentTab === 'settings' ? 'bg-white/20 text-white font-bold shadow-inner' : 'text-red-100 hover:bg-white/10 hover:text-white font-medium'" class="w-full flex items-center gap-3 px-4 py-3 rounded-xl transition text-left">
              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
             Paramètres
@@ -144,8 +152,32 @@
                           </select>
                       </div>
                       <div class="h-64 sm:h-80 w-full relative">
+<<<<<<< HEAD
                            <div class="h-full w-full">
                                <Line :data="chartData" :options="chartOptions" />
+=======
+                           <!-- CSS Line Chart Mockup -->
+                           <svg viewBox="0 0 100 40" class="w-full h-full preserve-aspect-ratio" preserveAspectRatio="none">
+                               <!-- Grid lines -->
+                               <path d="M0,10 L100,10 M0,20 L100,20 M0,30 L100,30" stroke="#f3f4f6" stroke-width="0.5" fill="none" />
+                               <!-- Path -->
+                               <path d="M0,35 C10,35 20,25 30,28 C40,31 50,15 60,30 C70,45 80,5 90,20 L100,25" stroke="#ef4444" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+                               <!-- Area Fill -->
+                               <path d="M0,35 C10,35 20,25 30,28 C40,31 50,15 60,30 C70,45 80,5 90,20 L100,25 L100,40 L0,40 Z" fill="url(#grad)" opacity="0.1" />
+                               <defs>
+                                   <linearGradient id="grad" x1="0%" y1="0%" x2="0%" y2="100%">
+                                       <stop offset="0%" stop-color="#ef4444" />
+                                       <stop offset="100%" stop-color="#ef4444" stop-opacity="0" />
+                                   </linearGradient>
+                               </defs>
+                           </svg>
+                           <div class="absolute bottom-[-20px] left-0 w-full flex justify-between text-xs text-gray-400 font-medium px-2">
+                               <span>01 Oct</span>
+                               <span>07 Oct</span>
+                               <span>14 Oct</span>
+                               <span>21 Oct</span>
+                               <span>28 Oct</span>
+>>>>>>> 262680e68fc409ddb582cf3cd223b6bbbd53a960
                            </div>
                       </div>
                   </div>
@@ -515,6 +547,7 @@
                </div>
           </div>
           
+<<<<<<< HEAD
           <!-- STAFF TAB -->
           <div v-if="currentTab === 'staff'" class="bg-white border border-gray-100 rounded-2xl shadow-sm overflow-hidden">
               <div class="p-6 border-b border-gray-100 flex justify-between items-center bg-white">
@@ -572,6 +605,8 @@
               </div>
           </div>
           
+=======
+>>>>>>> 262680e68fc409ddb582cf3cd223b6bbbd53a960
           <!-- SETTINGS (Placeholder) -->
           <div v-if="currentTab === 'settings'" class="bg-white border border-gray-100 rounded-2xl shadow-sm p-8 text-center py-20">
                <div class="inline-flex w-20 h-20 rounded-full bg-gray-100 items-center justify-center text-gray-400 mb-6">
@@ -589,6 +624,7 @@
 
 <script>
 import axios from 'axios';
+<<<<<<< HEAD
 import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend, Filler } from 'chart.js';
 import { Line } from 'vue-chartjs';
 
@@ -599,6 +635,11 @@ export default {
     components: {
         Line
     },
+=======
+
+// Mock logic specifically tailored for the blood donation administrative view
+export default {
+>>>>>>> 262680e68fc409ddb582cf3cd223b6bbbd53a960
     data() {
         return {
             user: { name: 'Admin', role: 'admin' },
@@ -609,7 +650,10 @@ export default {
                 appointments: 'Rendez-vous',
                 campaigns: 'Campagnes d\'Appel au Don',
                 stocks: 'Stocks de sang',
+<<<<<<< HEAD
                 staff: 'Personnel Médical',
+=======
+>>>>>>> 262680e68fc409ddb582cf3cd223b6bbbd53a960
                 settings: 'Paramètres'
             },
             stats: {
@@ -618,6 +662,7 @@ export default {
                 appointments_today: '0',
                 low_stock_alerts: '0'
             },
+<<<<<<< HEAD
             chartData: {
                 labels: ['01 Oct', '07 Oct', '14 Oct', '21 Oct', '28 Oct'],
                 datasets: [
@@ -651,6 +696,8 @@ export default {
                     }
                 }
             },
+=======
+>>>>>>> 262680e68fc409ddb582cf3cd223b6bbbd53a960
             mockAppointments: [],
             newCampaign: {
                 title: '',
@@ -659,6 +706,7 @@ export default {
                 expected_donors_count: 50,
                 blood_types_needed: []
             },
+<<<<<<< HEAD
             newStaff: {
                 name: '',
                 email: '',
@@ -670,6 +718,11 @@ export default {
             generatedLink: null,
             users: [],
             staffMembers: [],
+=======
+            isCreatingCampaign: false,
+            generatedLink: null,
+            users: [],
+>>>>>>> 262680e68fc409ddb582cf3cd223b6bbbd53a960
             appointments: [],
             bloodStocks: [],
             campaigns: []
@@ -686,7 +739,10 @@ export default {
         }
         this.fetchStats();
         this.fetchUsers();
+<<<<<<< HEAD
         this.fetchStaff();
+=======
+>>>>>>> 262680e68fc409ddb582cf3cd223b6bbbd53a960
         this.fetchAppointments();
         this.fetchBloodStocks();
         this.fetchCampaigns();
@@ -713,11 +769,16 @@ export default {
                 const response = await axios.get('http://127.0.0.1:8000/api/admin/users?role=donateur', {
                     headers: { 'Authorization': `Bearer ${localStorage.getItem('access_token')}` }
                 });
+<<<<<<< HEAD
                 this.users = response.data.data || response.data; // Handles paginated or plain array response
+=======
+                this.users = response.data.data; // Paginated response
+>>>>>>> 262680e68fc409ddb582cf3cd223b6bbbd53a960
             } catch (error) {
                 console.error('Failed to fetch users:', error);
             }
         },
+<<<<<<< HEAD
         async fetchStaff() {
             try {
                 const response = await axios.get('http://127.0.0.1:8000/api/admin/users?role=infirmier', {
@@ -751,12 +812,19 @@ export default {
         },
         async deleteUser(id) {
             if (confirm("Êtes-vous sûr de vouloir révoquer/bannir ce compte ?")) {
+=======
+        async deleteUser(id) {
+            if (confirm("Êtes-vous sûr de vouloir bannir ce donneur ?")) {
+>>>>>>> 262680e68fc409ddb582cf3cd223b6bbbd53a960
                 try {
                     await axios.delete(`http://127.0.0.1:8000/api/admin/users/${id}`, {
                         headers: { 'Authorization': `Bearer ${localStorage.getItem('access_token')}` }
                     });
                     this.fetchUsers();
+<<<<<<< HEAD
                     this.fetchStaff();
+=======
+>>>>>>> 262680e68fc409ddb582cf3cd223b6bbbd53a960
                 } catch (error) {
                      console.error('Failed to ban user:', error);
                 }
@@ -849,9 +917,15 @@ export default {
             }
         },
         copyLinkDirect(slug) {
+<<<<<<< HEAD
             const link = 'http://127.0.0.1:8000/share/campaign/' + slug;
             navigator.clipboard.writeText(link);
             alert("Lien copié dans le presse-papiers pour Rich Card WhatsApp !");
+=======
+            const link = window.location.origin + '/campaign/' + slug;
+            navigator.clipboard.writeText(link);
+            alert("Lien copié dans le presse-papiers !");
+>>>>>>> 262680e68fc409ddb582cf3cd223b6bbbd53a960
         },
         copyLink() {
             if (this.generatedLink) {

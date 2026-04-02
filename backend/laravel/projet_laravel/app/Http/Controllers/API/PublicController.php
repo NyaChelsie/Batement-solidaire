@@ -10,6 +10,7 @@ use App\Models\QRCode;
 
 class PublicController extends Controller
 {
+<<<<<<< HEAD
     // Get Active Emergency (for Homepage Banner)
     public function getActiveEmergency()
     {
@@ -31,6 +32,8 @@ class PublicController extends Controller
         return response()->json(\App\Models\DonationCenter::all());
     }
 
+=======
+>>>>>>> 262680e68fc409ddb582cf3cd223b6bbbd53a960
     // Get Featured Campaigns (e.g., active and high priority)
     public function getFeaturedCampaigns()
     {
@@ -55,6 +58,7 @@ class PublicController extends Controller
     {
         $request->validate([
             'campaign_id' => 'required|exists:donation_campaigns,id',
+<<<<<<< HEAD
             'donation_center_id' => 'required',
             'datetime' => 'nullable',
             
@@ -112,17 +116,39 @@ class PublicController extends Controller
             'donation_campaign_id' => $campaign->id,
             'donation_center_id' => $request->donation_center_id ?? 1,
             'user_id' => $userId,
+=======
+            'datetime' => 'required',
+            'donation_center_id' => 'required|exists:donation_centers,id',
+            'user_id' => 'nullable|exists:users,id',
+        ]);
+
+        $campaign = DonationCampaign::findOrFail($request->campaign_id);
+
+        // Split datetime into date and time
+        $datetimeParts = explode('T', $request->datetime);
+        $date = $datetimeParts[0];
+        $time = isset($datetimeParts[1]) ? substr($datetimeParts[1], 0, 5) : '08:00';
+
+        $appointment = Appointment::create([
+            'donation_campaign_id' => $campaign->id,
+            'donation_center_id' => $request->donation_center_id,
+            'user_id' => $request->user_id ?? (auth('sanctum')->check() ? auth('sanctum')->id() : null),
+>>>>>>> 262680e68fc409ddb582cf3cd223b6bbbd53a960
             'appointment_date' => $date,
             'appointment_time' => $time,
             'status' => 'scheduled',
         ]);
 
+<<<<<<< HEAD
         // ALPHANUMERIC SHORT CODE FOR HGD
         $groupAlpha = preg_replace('/[^a-zA-Z]/', '', $request->guest_blood_type ?? 'O');
         if (empty($groupAlpha)) $groupAlpha = 'O';
         $shortCode = 'HGD-' . strtoupper(substr($groupAlpha, 0, 1)) . '-' . rand(100, 999);
 
         $qrData = $shortCode . '-' . $appointment->id;
+=======
+        $qrData = 'BLOOD-APPT-' . $appointment->id . '-' . uniqid();
+>>>>>>> 262680e68fc409ddb582cf3cd223b6bbbd53a960
 
         $qrRecord = QRCode::create([
             'donation_campaign_id' => $campaign->id,
@@ -133,6 +159,7 @@ class PublicController extends Controller
         $appointment->qr_code_path = $qrData;
         $appointment->save();
 
+<<<<<<< HEAD
         // Phase 9: Real SMS notification - send pass details to donor
         if (!empty($request->guest_phone)) {
             $centerName = $request->donation_center_id == 2 ? 'HGOPY' : "L'Hôpital Général";
@@ -144,6 +171,11 @@ class PublicController extends Controller
             'appointment' => $appointment,
             'qr_data' => $qrData,
             'short_code' => $shortCode
+=======
+        return response()->json([
+            'appointment' => $appointment,
+            'qr_data' => $qrData
+>>>>>>> 262680e68fc409ddb582cf3cd223b6bbbd53a960
         ], 201);
     }
 }

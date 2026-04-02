@@ -48,11 +48,19 @@ class DatabaseSeeder extends Seeder
                 'operating_hours' => ['Mon-Fri' => '08:00-18:00', 'Sat' => '08:00-14:00']
             ],
             [
+<<<<<<< HEAD
                 'name' => 'HGOPY (Hôpital Gynéco-Obstétrique et Pédiatrique)',
                 'address' => 'Ngousso',
                 'city' => 'Yaoundé',
                 'latitude' => 3.8967,
                 'longitude' => 11.5310,
+=======
+                'name' => 'Hôpital Laquintinie',
+                'address' => 'Akwa',
+                'city' => 'Douala',
+                'latitude' => 4.0450,
+                'longitude' => 9.7020,
+>>>>>>> 262680e68fc409ddb582cf3cd223b6bbbd53a960
                 'operating_hours' => ['Mon-Fri' => '07:30-17:00', 'Sat' => '08:00-12:00']
             ],
             [

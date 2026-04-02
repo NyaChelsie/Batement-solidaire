@@ -57,6 +57,7 @@ class AuthController extends Controller
             return response()->json(['message' => 'Email ou mot de passe incorrect (Hash mismatch)'], 401);
         }
 
+<<<<<<< HEAD
         $token = $user->createToken('auth_token')->plainTextToken;
 
         return response()->json([
@@ -100,6 +101,11 @@ class AuthController extends Controller
         if (!$user) {
             return response()->json(['message' => 'Utilisateur introuvable.'], 404);
         }
+=======
+        // if (!Auth::attempt($request->only('email', 'password'))) {
+        //    return response()->json(['message' => 'Invalid login details'], 401);
+        // }
+>>>>>>> 262680e68fc409ddb582cf3cd223b6bbbd53a960
 
         $token = $user->createToken('auth_token')->plainTextToken;
 
