@@ -1,0 +1,1 @@
+["id","user_id","title","description","urgency_level","blood_types_needed","expected_donors_count","hospital","slug","secret_code","qr_code_path","is_active","created_at","updated_at","objective_id"]
